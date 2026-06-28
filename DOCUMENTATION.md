@@ -112,22 +112,3 @@ Capture the following screenshots to fulfill the submission requirements:
     ![Success Toast](screenshots/08_success_toast_notification.png)
 
 ---
-
-## 📹 Demo Video Recording Script
-
-### Technical Setup:
-
-- **Resolution**: 1080p, 16:9 aspect ratio.
-- **Duration**: ~90 to 120 seconds.
-- **Microphone**: High-quality audio.
-
-### Narration Storyboard:
-
-| Timestamp       | Visual Action                                                                                                                | Narration Script                                                                                                                                                                                                                                                                               |
-| :-------------- | :--------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **0:00 - 0:15** | Start on the HR Dashboard page. Highlight the metric cards.                                                                  | _"Welcome to the CRUD Employee Management System. Our dashboard automatically fetches and displays key metrics from the database, including total employee counts, active departments, average payroll, and new hires this calendar month."_                                                   |
-| **0:15 - 0:30** | Click on "Employees" in the sidebar to open the directory table.                                                             | _"Navigating to the directory, we see a clean data table displaying employee profiles. The list supports ascending and descending sorting on columns like Name, Department, and Salary, all processed dynamically."_                                                                           |
-| **0:30 - 0:45** | Type a name into the search bar. Show the table filtering in real-time.                                                      | _"The search bar implements real-time query filtering. As I type a role, name, or department, the table updates instantly. We can also adjust the display size using the pagination dropdown."_                                                                                                |
-| **0:45 - 1:15** | Click "Add Employee". Attempt to submit empty to show errors. Fill it out correctly, click save, and show the success toast. | _"Let's add a new employee. If I try to submit the form blank, client-side validations block the submission. Filling in valid details, including a matching email format and a 10-digit phone number, adds the record to the system and shows a success toast."_                               |
-| **1:15 - 1:35** | Search for the newly added employee. Click the "Edit" button. Modify their salary and role, then save.                       | _"I can search for our new hire, open the Edit modal—which pre-populates all inputs—modify their role and salary, and submit. The dashboard average salary recalculates immediately."_                                                                                                         |
-| **1:35 - 1:50** | Click "Delete" on a row. Confirm deletion in the soft overlay.                                                               | _"Finally, deleting a record prompts a soft confirmation check before removing the employee from the database. The system is designed with a MongoDB connection timeout that falls back to a local JSON database if MongoDB is offline, ensuring 100% server uptime. Thank you for watching!"_ |
