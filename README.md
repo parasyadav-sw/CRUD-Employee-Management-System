@@ -7,12 +7,14 @@ A production-ready, full-stack Employee Management System built for HR Administr
 ## Tech Stack
 
 ### Frontend
+
 - **React.js (Vite)**: Quick hot-module-reloading (HMR) setup.
 - **Axios**: HTTP client configuration for backend requests.
 - **Lucide React**: Premium vector icons.
 - **Vanilla CSS3**: Tailored layout structure (Grid/Flexbox), soft shadows, and clean animations (fade-in, slide-up, spinner rotation).
 
 ### Backend
+
 - **Node.js & Express.js**: REST API server.
 - **Mongoose / MongoDB**: ODM for database persistence, unique keys, and index constraints.
 - **CORS**: Configured for cross-origin local testing.
@@ -23,6 +25,7 @@ A production-ready, full-stack Employee Management System built for HR Administr
 ## Features
 
 ### 1. HR Dashboard
+
 - **Aggregate Analytics**: Calculates metrics dynamically from the database:
   - **Total Employees**: Total staff records.
   - **Departments**: Count of active departments.
@@ -32,6 +35,7 @@ A production-ready, full-stack Employee Management System built for HR Administr
 - **System Notices & Quick Actions**: Fast redirects to the employee list.
 
 ### 2. Employee Directory & Directory CRUD
+
 - **Responsive Table**: Columns displaying Employee details, custom badges for departments, and action triggers.
 - **Real-Time Search**: Debounced search inputs matching Name, Email, Department, or Role (updates without page refresh).
 - **Column Sorting**: Sort by Name, Department, Salary, or Join Date with visual sorting arrows (Ascending/Descending).
@@ -103,10 +107,12 @@ CRUD Employee Management System/
 ## Installation & Setup
 
 ### Prerequisites
+
 - [Node.js](https://nodejs.org/) (version 16.x or higher)
 - [MongoDB Local Server](https://www.mongodb.com/try/download/community) running on port 27017, OR a [MongoDB Atlas Account](https://www.mongodb.com/cloud/atlas)
 
 ### 1. Database & Backend Configuration
+
 1. Open your terminal and navigate to the `server/` directory:
    ```bash
    cd server
@@ -127,11 +133,15 @@ CRUD Employee Management System/
    ```
 
 ### 2. Seeding Sample Data
+
 To populate the database with 10 sample employee records across various departments (including hires joined in the current month):
+
 ```bash
 npm run seed
 ```
-*Expected console output:*
+
+_Expected console output:_
+
 ```text
 Connected to MongoDB for seeding...
 Cleared existing employee records.
@@ -139,15 +149,19 @@ Successfully seeded 10 employee records!
 ```
 
 ### 3. Running the Backend Server
+
 Start the development server with live auto-reload (using nodemon):
+
 ```bash
 npm run dev
 ```
+
 The server will boot on `http://localhost:5000`.
 
 ---
 
 ### 4. Frontend Client Configuration
+
 1. Open a new terminal tab/session and navigate to the `frontend/` directory:
    ```bash
    cd frontend
@@ -170,19 +184,21 @@ All routes are prefix-scoped to `/api/employees`.
 
 ### Endpoints
 
-| HTTP Method | Route | Description | Query Parameters |
-| :--- | :--- | :--- | :--- |
-| **GET** | `/api/employees` | Fetch paginated, sortable, and searchable employee list. | `search`, `sortBy`, `order`, `page`, `limit` |
-| **GET** | `/api/employees/dashboard/stats` | Fetch aggregated dashboard KPI counts and averages. | None |
-| **GET** | `/api/employees/:id` | Fetch specific employee details. | None |
-| **POST** | `/api/employees` | Add a new employee record. | None (Requires JSON body) |
-| **PUT** | `/api/employees/:id` | Update an existing employee details. | None (Requires JSON body) |
-| **DELETE** | `/api/employees/:id` | Remove an employee record from the database. | None |
+| HTTP Method | Route                            | Description                                              | Query Parameters                             |
+| :---------- | :------------------------------- | :------------------------------------------------------- | :------------------------------------------- |
+| **GET**     | `/api/employees`                 | Fetch paginated, sortable, and searchable employee list. | `search`, `sortBy`, `order`, `page`, `limit` |
+| **GET**     | `/api/employees/dashboard/stats` | Fetch aggregated dashboard KPI counts and averages.      | None                                         |
+| **GET**     | `/api/employees/:id`             | Fetch specific employee details.                         | None                                         |
+| **POST**    | `/api/employees`                 | Add a new employee record.                               | None (Requires JSON body)                    |
+| **PUT**     | `/api/employees/:id`             | Update an existing employee details.                     | None (Requires JSON body)                    |
+| **DELETE**  | `/api/employees/:id`             | Remove an employee record from the database.             | None                                         |
 
 ### Sample Payloads
 
 #### Create Employee (`POST /api/employees`)
+
 **JSON Request Body:**
+
 ```json
 {
   "name": "Sarah Connor",
@@ -196,6 +212,7 @@ All routes are prefix-scoped to `/api/employees`.
 ```
 
 **JSON Response (201 Created):**
+
 ```json
 {
   "success": true,
@@ -221,6 +238,7 @@ All routes are prefix-scoped to `/api/employees`.
 ## Design System & UX Choices
 
 The UI design is implemented in `frontend/src/index.css` following professional SaaS styles:
+
 - **Clean Background**: Pure off-white `#FAFAF7` background paired with white card containers to establish a solid structure.
 - **Accents**: Soft forest green `#2D6A4F` for principal action indicators, paired with warm coral `#FF7F50` for highlights, avoiding high-contrast corporate blues.
 - **Micro-Animations**: Clean inputs with focus rings, hover lift states (`transform: translateY(-4px)`), smooth modal blur fade-ins, and toast exit slides.
@@ -231,6 +249,7 @@ The UI design is implemented in `frontend/src/index.css` following professional 
 ## Deployment Ready Guide
 
 ### Backend Deployment (Render)
+
 1. Commit the project code to a GitHub repository.
 2. In [Render](https://render.com/), create a new **Web Service** linked to your repository.
 3. Configure the Root Directory setting to `server`.
@@ -242,6 +261,7 @@ The UI design is implemented in `frontend/src/index.css` following professional 
    - `NODE_ENV`: `production`
 
 ### Frontend Deployment (Vercel)
+
 1. Add a `vercel.json` file in the `frontend` folder or root.
 2. In [Vercel](https://vercel.com/), create a new project linked to your repository.
 3. Set the Root Directory to `frontend`.
@@ -250,4 +270,35 @@ The UI design is implemented in `frontend/src/index.css` following professional 
 6. Output directory: `dist`
 7. Add Environment Variables:
    - `VITE_API_URL`: Set to your deployed Render URL (e.g., `https://your-app.onrender.com/api`).
-"# CRUD-Employee-Management-System" 
+     "# CRUD-Employee-Management-System"
+
+---
+
+## 📸 Screenshots Blueprint
+
+Capture the following screenshots to fulfill the submission requirements:
+
+1.  **`01_hr_dashboard.png`**: The HR Dashboard page showing the four metric cards populated with seeded numbers, system notices, and quick links.
+    ![HR Dashboard](screenshots/01_hr_dashboard.png)
+
+2.  **`02_employee_directory.png`**: The Employee Directory page showing the responsive table, sorting indicators on column headers, and pagination controls.
+
+3.  **`03_search_filter_active.png`**: The table after entering a search term (showing only filtered records).
+    ![Search Filter](screenshots/03_search_filter_active.png)
+
+4.  **`04_add_employee_modal.png`**: The "Add Employee" modal overlay displaying input fields.
+    ![Add Employee](screenshots/04_add_employee_modal.png)
+
+5.  **`05_client_validation_error.png`**: The Add Form with active validation errors showing on empty/incorrect inputs.
+    ![Validation](screenshots/05_client_validation_error.png)
+
+6.  **`06_edit_employee_prefilled.png`**: The "Edit Employee" modal displaying prefilled data for a chosen employee.
+    ![Edit Employee](screenshots/06_edit_employee_prefilled.png)
+
+7.  **`07_delete_confirmation.png`**: The soft confirmation delete modal indicating the employee name before purging.
+    ![Delete Confirmation](screenshots/07_delete_confirmation.png)
+
+8.  **`08_success_toast_notification.png`**: The floating success toast notification showing after a save/delete action.
+    ![Success Toast](screenshots/08_success_toast_notification.png)
+
+---
