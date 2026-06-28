@@ -1,0 +1,110 @@
+[
+  {
+    "_id": "f12f9e3af349005f73958d47",
+    "name": "Sarah Connor",
+    "email": "sarah.connor@technova.com",
+    "phone": "5551234567",
+    "department": "Engineering",
+    "role": "Senior Frontend Architect",
+    "salary": 95000,
+    "joinDate": "2026-06-23T07:29:08.954Z",
+    "createdAt": "2026-06-28T07:29:08.956Z",
+    "updatedAt": "2026-06-28T07:29:08.956Z"
+  },
+  {
+    "_id": "289116b2a3f59c0f5ed70ae5",
+    "name": "John Doe",
+    "email": "john.doe@technova.com",
+    "phone": "5559876543",
+    "department": "Engineering",
+    "role": "Backend Software Engineer",
+    "salary": 82000,
+    "joinDate": "2024-03-15T00:00:00.000Z",
+    "createdAt": "2026-06-28T07:29:08.956Z",
+    "updatedAt": "2026-06-28T07:29:08.956Z"
+  },
+  {
+    "_id": "bc51a7f945202fb6a8eefc78",
+    "name": "Emily Watson",
+    "email": "emily.watson@technova.com",
+    "phone": "5552345678",
+    "department": "Human Resources",
+    "role": "HR Manager",
+    "salary": 75000,
+    "joinDate": "2023-11-01T00:00:00.000Z",
+    "createdAt": "2026-06-28T07:29:08.956Z",
+    "updatedAt": "2026-06-28T07:29:08.956Z"
+  },
+  {
+    "_id": "fdd09ec31ec383f9f1bc5114",
+    "name": "Michael Scott",
+    "email": "michael.scott@technova.com",
+    "phone": "5558765432",
+    "department": "Sales",
+    "role": "Regional Sales Director",
+    "salary": 90000,
+    "joinDate": "2022-05-10T00:00:00.000Z",
+    "createdAt": "2026-06-28T07:29:08.956Z",
+    "updatedAt": "2026-06-28T07:29:08.956Z"
+  },
+  {
+    "_id": "9dc1ab05a4438dee81fad65e",
+    "name": "Pam Beesly",
+    "email": "pam.beesly@technova.com",
+    "phone": "5553456789",
+    "department": "Human Resources",
+    "role": "HR Coordinator",
+    "salary": 50000,
+    "joinDate": "2026-06-16T07:29:08.956Z",
+    "createdAt": "2026-06-28T07:29:08.956Z",
+    "updatedAt": "2026-06-28T07:29:08.956Z"
+  },
+  {
+    "_id": "e5e96f3feddc4e318b3f6f88",
+    "name": "David Lightman",
+    "email": "david.lightman@technova.com",
+    "phone": "5557654321",
+    "department": "Engineering",
+    "role": "Security Consultant",
+    "salary": 110000,
+    "joinDate": "2025-01-20T00:00:00.000Z",
+    "createdAt": "2026-06-28T07:29:08.956Z",
+    "updatedAt": "2026-06-28T07:29:08.956Z"
+  },
+  {
+    "_id": "12906dec1c275deb96ae11da",
+    "name": "Jane Foster",
+    "email": "jane.foster@technova.com",
+    "phone": "5554567890",
+    "department": "Product",
+    "role": "Senior Product Manager",
+    "salary": 105000,
+    "joinDate": "2024-08-12T00:00:00.000Z",
+    "createdAt": "2026-06-28T07:29:08.956Z",
+    "updatedAt": "2026-06-28T07:29:08.956Z"
+  },
+  {
+    "_id": "c3d80d48761c7e35344cb23e",
+    "name": "Tony Stark",
+    "email": "tony.stark@technova.com",
+    "phone": "5556543210",
+    "department": "Engineering",
+    "role": "Chief Technology Officer",
+    "salary": 250000,
+    "joinDate": "2021-02-15T00:00:00.000Z",
+    "createdAt": "2026-06-28T07:29:08.956Z",
+    "updatedAt": "2026-06-28T07:29:08.956Z"
+  },
+  {
+    "_id": "ed625178b82ea645791f672e",
+    "name": "Natasha Romanoff",
+    "email": "natasha.romanoff@technova.com",
+    "phone": "5555678901",
+    "department": "Marketing",
+    "role": "Brand Campaign Lead",
+    "salary": 80000,
+    "joinDate": "2023-04-18T00:00:00.000Z",
+    "createdAt": "2026-06-28T07:29:08.956Z",
+    "updatedAt": "2026-06-28T07:29:08.956Z"
+  }
+]

@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "9a38f321-4f30-4be6-8e54-97216a693cb7",
+		"name": "Employee Management System API",
+		"description": "API collection for WeIntern Employee Management CRUD CRUD endpoints, validations, and dashboard calculations.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dashboard Statistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/employees/dashboard/stats",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"employees",
+						"dashboard",
+						"stats"
+					]
+				},
+				"description": "Retrieves aggregate stats: total employees count, unique departments, average salary, and new hires this month."
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/employees?page=1&limit=10",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				},
+				"description": "Fetch list of employees. Supports pagination via page/limit query params."
+			},
+			"response": []
+		},
+		{
+			"name": "Search Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/employees?search=Sarah",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Sarah",
+							"description": "Matches name, email, department, or role (case-insensitive)"
+						}
+					]
+				},
+				"description": "Search for employees matching query text in name, email, department, or job title."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employees Sorted (Salary Desc)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/employees?sortBy=salary&order=desc",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "salary",
+							"description": "Sort target field (name, department, salary, joinDate)"
+						},
+						{
+							"key": "order",
+							"value": "desc",
+							"description": "asc or desc"
+						}
+					]
+				},
+				"description": "Retrieves employee list sorted by salary descending."
+			},
+			"response": []
+		},
+		{
+			"name": "Add Employee Record",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Peter Parker\",\n    \"email\": \"peter.parker@technova.com\",\n    \"phone\": \"5551112222\",\n    \"department\": \"Engineering\",\n    \"role\": \"Junior Web Developer\",\n    \"salary\": 62000,\n    \"joinDate\": \"2026-06-01\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/employees",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"employees"
+					]
+				},
+				"description": "Registers a new employee. Validates name, email, positive salary, 10-digit phone, and join date."
+			},
+			"response": []
+		},
+		{
+			"name": "Add Employee (Validation Error Demo)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"\",\n    \"email\": \"invalid-email-format\",\n    \"phone\": \"123\",\n    \"department\": \"Marketing\",\n    \"role\": \"Marketer\",\n    \"salary\": -500,\n    \"joinDate\": \"\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/employees",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"employees"
+					]
+				},
+				"description": "Demonstrates error responses when validation rules are violated. Expected return status is 400 Bad Request."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Employee by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/employees/{{employeeId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"employees",
+						"{{employeeId}}"
+					]
+				},
+				"description": "Retrieves the full record of a single employee by their database Object ID."
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee Details",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Peter Parker\",\n    \"email\": \"peter.parker@technova.com\",\n    \"phone\": \"5559990000\",\n    \"department\": \"Engineering\",\n    \"role\": \"Mid-Level Full Stack Developer\",\n    \"salary\": 70000,\n    \"joinDate\": \"2026-06-01\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/employees/{{employeeId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"employees",
+						"{{employeeId}}"
+					]
+				},
+				"description": "Updates details for an existing employee. Performs email availability checking."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee Record",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/employees/{{employeeId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"employees",
+						"{{employeeId}}"
+					]
+				},
+				"description": "Deletes the employee from the database by ID."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:5000",
+			"type": "string"
+		},
+		{
+			"key": "employeeId",
+			"value": "replace_with_valid_mongoose_id",
+			"type": "string"
+		}
+	]
+}
